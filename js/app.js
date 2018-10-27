@@ -10,6 +10,7 @@
 		},
 		methods: {
 			addVal() {
+				if(!this.setVal.trim())return
 				this.list.push({
 					content: this.setVal,
 					id: this.list.length ? this.list.sort((a,b) => a.id - b.id).slice(this.list.length - 1,)[0].id + 1 : 1,
